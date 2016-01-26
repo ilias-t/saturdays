@@ -45,5 +45,8 @@
   "npm:react@0.14.6": {
     "fbjs": "npm:fbjs@^0.6.1",
     "process": "github:jspm/nodelibs-process@^0.1.0"
+  },
+  "npm:react-dom@0.14.6": {
+    "react": "npm:react@^0.14.6"
   }
 }

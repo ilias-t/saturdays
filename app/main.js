@@ -1,5 +1,16 @@
 console.log("linked!");
 
 import React from 'react';
+import ReactDOM from 'react-dom';
 
-console.log("React working:", React);
+class Hello extends React.Component {
+  render() {
+    return (
+      <div>
+        Hello World
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(<Hello></Hello>, document.getElementById("root"));
