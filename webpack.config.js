@@ -11,8 +11,6 @@ const PATHS = {
 
 process.env.BABEL_ENV = TARGET;
 
-console.log("app path", PATHS.app)
-
 const common = {
   entry: PATHS.app,
 
