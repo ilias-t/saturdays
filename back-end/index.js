@@ -3,6 +3,7 @@ var request = require('request');
 var apiKeys = require('./api-keys');
 
 //App settings
+var port = process.env.PORT || 8080;
 app.use(function(req, res, next) {
   //CORS
   res.header("Access-Control-Allow-Origin", "http://localhost:8080"); //whitelist port 8080
@@ -28,8 +29,8 @@ app.get('/campsites/:name', function(req, res) {
 });
 
 //Start server
-app.listen(8000, function() {
-  console.log("server listening on 8000");
+app.listen(port, function() {
+  console.log("server listening on" + port);
 });
 
 

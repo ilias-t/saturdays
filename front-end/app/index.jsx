@@ -1,7 +1,17 @@
 "use strict"
 
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
+import { Router, Route, Link } from 'react-router'
+
+const routes = {
+  path: '/',
+  component: App,
+  childRoutes: [
+    { path: 'about', component: About },
+    { path: 'inbox', component: Inbox },
+  ]
+}
 
 class CampSiteSearch extends React.Component {
   render() {
@@ -26,4 +36,16 @@ class CampSiteSearch extends React.Component {
   }
 }
 
-ReactDOM.render(<CampSiteSearch/>, document.getElementById("root"))
+const Home = React.createClass({
+  render() {
+    return (
+      <div>
+        <h2>Home</h2>
+        <CampSiteSearch/>
+      </div>
+    )
+  }
+})
+
+//Router
+render(<Router routes={routes} />, document.body)
