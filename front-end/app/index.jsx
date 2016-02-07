@@ -1,14 +1,9 @@
 "use strict"
 
-//React imports
+//Dependencies
 import React from 'react'
 import { render } from 'react-dom'
 import { Router } from 'react-router'
-
-//Component imports
-import App from './components/App'
-import CampSiteSearch from './components/CampsiteSearchForm'
-import Home from './components/Home'
 import routes from "./routes"
-
+//Render multi-page application
 render(<Router routes={routes} />, document.getElementById("app"))
