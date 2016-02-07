@@ -4,12 +4,10 @@ import { Link } from 'react-router'
 export default class Nav extends React.Component {
   render () {
     return (
-      <div>
-        <h3>Nav!</h3>
-        <ul>
-          <li><Link to="/home">Home</Link></li>
-        </ul>
-      </div>
+      <ul>
+        <li><Link to="/search">Track Campsites</Link></li>
+        <li><Link to="/calendar">Book an Upcoming Trip</Link></li>
+      </ul>
     )
   }
 }

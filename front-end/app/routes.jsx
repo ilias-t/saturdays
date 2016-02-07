@@ -1,11 +1,13 @@
 import App from './components/App'
-import Home from './components/Home'
+import Search from './components/CampsiteSearchForm'
+import Calendar from './components/Calendar'
 
 const routes = {
   path: '/',
   component: App,
   childRoutes: [
-    { path: 'home', component: Home }
+    { path: 'search', component: Search },
+    { path: 'calendar', component: Calendar }
   ]
 }
 export default routes
