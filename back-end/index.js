@@ -7,20 +7,21 @@ var apiKeys = require('./api-keys');
 var port = process.env.PORT || 8000;
 app.use(function(req, res, next) {
   //CORS
-  res.header("Access-Control-Allow-Origin", "http://localhost:8080"); //whitelist port 8080
+  res.header("Access-Control-Allow-Origin", "http://localhost:3000"); //whitelist port 8080
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
-})); 
+}));
 
 //Root
 app.get('/', function(req, res) {
-  res.send("HELLO!");
+  res.send("Root route");
 });
 
+//Track a new campsite
 app.post('/campsites', function(req, res) {
   console.log("just posted", req.body);
 });
