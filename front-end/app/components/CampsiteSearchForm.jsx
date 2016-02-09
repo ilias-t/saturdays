@@ -1,4 +1,5 @@
 import React from 'react'
+import req from '../utilities/httpRequestHelper'
 
 export default class CampSiteSearch extends React.Component {
   render() {
@@ -12,15 +13,9 @@ export default class CampSiteSearch extends React.Component {
 
   submit(e) { //form submit event
     e.preventDefault() //prevent form submission
-    window.blah = request;
-    //TODO: refactor this.
-    var request = new XMLHttpRequest()
-    request.onreadystatechange = () => { //event listener to track request's state
-      if (request.readyState === 4) { //request state is set to complete
-        console.log(request.responseText)
-      }
-    }
-    request.open("POST", "http://localhost:8000/campsites") //initialize request
-    request.send(null) //send request
+    //refactor req method
+    req("GET", "localhost:8000", (data) => {
+      console.log(data)
+    })
   }
 }
