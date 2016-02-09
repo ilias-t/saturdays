@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var apiKeys = require('./api-keys');
 
 //App settings
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 8000;
 app.use(function(req, res, next) {
   //CORS
   res.header("Access-Control-Allow-Origin", "http://localhost:8080"); //whitelist port 8080
@@ -22,7 +22,7 @@ app.get('/', function(req, res) {
 });
 
 app.post('/campsites', function(req, res) {
-  console.log("posting");
+  console.log("just posted", req.body);
 });
 
 // Create a new campsite to track
