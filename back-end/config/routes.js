@@ -1,8 +1,13 @@
 export default (app) => {
   //Root
   app.get('/', (req, res) => {
-    res.send("HELLO!");
+    res.send("Root route");
   })
+
+  //Track a new campsite
+  app.post('/campsites', (req, res) => {
+    console.log("just posted", req.body);
+  });
 
   // Create a new campsite to track
   app.get('/campsites/:name', (req, res) => {

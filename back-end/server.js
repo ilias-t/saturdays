@@ -1,5 +1,6 @@
 import express from 'express'
 import request from 'request'
+import bodyParser from 'body-parser'
 import apiKeys from './api-keys'
 import config from './config/config'
 import routes from './config/routes'
@@ -14,7 +15,3 @@ routes(app)
 app.listen(app.port, () => {
   console.log("server listening on" + app.port);
 })
-
-
-//notes: xml2json
-//https://github.com/Leonidas-from-XIV/node-xml2js
