@@ -1,24 +1,20 @@
-var app = require('express')();
-var request = require('request');
-var apiKeys = require('./api-keys');
+import express from 'express'
+import request from 'request'
+import apiKeys from './api-keys'
+import config from './config/config'
+import routes from './config/routes'
 
-//App settings
-var port = process.env.PORT || 8080;
-app.use(function(req, res, next) {
-  //CORS
-  res.header("Access-Control-Allow-Origin", "http://localhost:8080"); //whitelist port 8080
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
-
-// routes
-require('./config/routes')(app);
-
-//Start server
-app.listen(port, function() {
-  console.log("server listening on" + port);
-});
+// initialize app
+const app = express()
+// configuration
+config(app)
+// register routes
+routes(app)
+// start server
+app.listen(app.port, () => {
+  console.log("server listening on" + app.port);
+})
 
 
-//xml2json
+//notes: xml2json
 //https://github.com/Leonidas-from-XIV/node-xml2js
