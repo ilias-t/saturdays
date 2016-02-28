@@ -8,7 +8,7 @@ import routes from './config/routes'
 // initialize app
 const app = express()
 // configuration
-config(app)
+config(app, bodyParser)
 // register routes
 routes(app)
 // start server
