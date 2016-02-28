@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-core": "^6.5.2",
     "express": "^4.13.4",
     "request": "^2.69.0"
   }
