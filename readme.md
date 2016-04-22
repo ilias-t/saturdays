@@ -2,7 +2,7 @@
 
 Track availabilities every saturday for desirable campsites.
 
-##Setup/Notes for self
+##Setup
 
 * Front-end: run `npm install && npm start` (served on port 3000)
 * Back-end: run `npm install` && `node index.js` (served on port 8000)
@@ -12,3 +12,7 @@ Track availabilities every saturday for desirable campsites.
 * React
 * Express
 * Webpack
+
+##Notes
+
+* Use [RxJS](https://github.com/Reactive-Extensions/RxJS) for search.
